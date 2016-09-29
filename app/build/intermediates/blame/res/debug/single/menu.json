@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/Admin/Documents/Udacity/Sunshine/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/res/merged/debug/menu/forecastfragment.xml",
+        "source": "/Users/Admin/Documents/Udacity/Sunshine/app/src/main/res/menu/forecastfragment.xml"
+    },
+    {
+        "merged": "/Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/res/merged/debug/menu/detail.xml",
+        "source": "/Users/Admin/Documents/Udacity/Sunshine/app/src/main/res/menu/detail.xml"
+    }
+]
