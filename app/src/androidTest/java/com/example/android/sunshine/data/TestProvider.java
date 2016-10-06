@@ -102,6 +102,7 @@ public class TestProvider extends AndroidTestCase {
         you have implemented delete functionality there.
      */
     public void deleteAllRecords() {
+
         deleteAllRecordsFromProvider();
     }
 
@@ -164,7 +165,7 @@ public class TestProvider extends AndroidTestCase {
         long testDate = 1419120000L; // December 21st, 2014
         // content://com.example.android.sunshine.app/weather/94074/20140612
         type = mContext.getContentResolver().getType(
-                WeatherEntry.buildWeatherLocationWithDate(testLocation, testDate));
+                WeatherEntry.buildWeatherLocationWithStartDate(testLocation, testDate));
         // vnd.android.cursor.item/com.example.android.sunshine.app/weather/1419120000
         assertEquals("Error: the WeatherEntry CONTENT_URI with location and date should return WeatherEntry.CONTENT_ITEM_TYPE",
                 WeatherEntry.CONTENT_ITEM_TYPE, type);
@@ -196,7 +197,7 @@ public class TestProvider extends AndroidTestCase {
         long weatherRowId = db.insert(WeatherEntry.TABLE_NAME, null, weatherValues);
         assertTrue("Unable to Insert WeatherEntry into the Database", weatherRowId != -1);
 
-        db.close();
+        //db.close();
 
         // Test the basic content provider query
         Cursor weatherCursor = mContext.getContentResolver().query(
@@ -397,7 +398,7 @@ public class TestProvider extends AndroidTestCase {
 
         // Get the joined Weather data for a specific date
         weatherCursor = mContext.getContentResolver().query(
-                WeatherEntry.buildWeatherLocationWithDate(TestUtilities.TEST_LOCATION, TestUtilities.TEST_DATE),
+                WeatherEntry.buildWeatherLocationWithStartDate(TestUtilities.TEST_LOCATION, TestUtilities.TEST_DATE),
                 null,
                 null,
                 null,

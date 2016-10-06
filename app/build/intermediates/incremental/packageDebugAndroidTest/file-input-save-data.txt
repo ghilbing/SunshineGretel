@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Oct 03 11:25:04 PDT 2016
+#Wed Oct 05 12:32:08 PDT 2016
 2.base=/Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/res/resources-debug-androidTest.ap_
 5.file=/Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/transforms/mergeJavaRes/androidTest/debug/jars/2/1f/main.jar/junit/runner/smalllogo.gif
 5.set=JAVA_RESOURCE
