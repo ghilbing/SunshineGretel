@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:7:5-44:19
+ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:7:5-47:19
 MERGED from [com.android.support:design:23.4.0] /Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/Admin/Documents/Udacity/Sunshine/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
@@ -77,9 +77,13 @@ ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:33:13-45
 provider#com.example.android.sunshine.data.WeatherProvider
-ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:40:9-42:51
+ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:40:9-44:38
 	android:authorities
 		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:41:13-63
+	android:enabled
+		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:43:13-35
+	android:exported
+		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:44:13-36
 	android:name
 		ADDED from /Users/Admin/Documents/Udacity/Sunshine/app/src/main/AndroidManifest.xml:42:13-49
 uses-sdk

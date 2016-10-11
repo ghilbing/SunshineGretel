@@ -2,6 +2,7 @@ package com.example.android.sunshine;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -46,7 +47,7 @@ public class BlankFragment extends Fragment implements LoaderManager.LoaderCallb
 
     };
 
-    //These indices are tied to FORECAST_COLUMNS. If FORECAST_COLUMNS changes, thes must change.
+    //These indices are tied to FORECAST_COLUMNS. If FORECAST_COLUMNS changes, this must change.
 
     static final int COL_WEATHER_ID = 0;
     static final int COL_WEATHER_DATE = 1;
@@ -192,6 +193,8 @@ public class BlankFragment extends Fragment implements LoaderManager.LoaderCallb
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor){
 
         mForecastAdapter.swapCursor(cursor);
+        DatabaseUtils.dumpCursor(cursor);
+
 
     }
 

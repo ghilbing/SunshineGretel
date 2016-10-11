@@ -158,8 +158,8 @@ public class WeatherContract {
 
             long normalizedDate = normalizeDate(startDate);
             return CONTENT_URI.buildUpon().appendPath(locationSetting)
-                   //.appendQueryParameter(COLUMN_DATE,Long.toString(normalizedDate)).build();
-                    .appendPath(Long.toString(normalizedDate)).build();
+                   .appendQueryParameter(COLUMN_DATE,Long.toString(normalizedDate)).build();
+                   // .appendPath(Long.toString(normalizedDate)).build();
 
 
         }
