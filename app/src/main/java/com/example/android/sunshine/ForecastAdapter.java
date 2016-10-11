@@ -9,13 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 /**
  * {@link ForecastAdapter} exposes a list of weather forecasts
  * from a {@link Cursor} to a {@link android.widget.ListView}.
  */
 public class ForecastAdapter extends CursorAdapter {
-
 
     private static final int VIEW_TYPE_COUNT = 2;
     private static final int VIEW_TYPE_TODAY = 0;
@@ -24,76 +22,65 @@ public class ForecastAdapter extends CursorAdapter {
     /*
         Cache of the children views for a forecast list item
      */
-
     public static class ViewHolder {
-
         public final ImageView iconView;
         public final TextView dateView;
         public final TextView descriptionView;
         public final TextView highTempView;
         public final TextView lowTempView;
 
-        public ViewHolder(View view){
-
+        public ViewHolder(View view) {
             iconView = (ImageView) view.findViewById(R.id.list_item_icon);
             dateView = (TextView) view.findViewById(R.id.list_item_date_textview);
             descriptionView = (TextView) view.findViewById(R.id.list_item_forecast_textview);
             highTempView = (TextView) view.findViewById(R.id.list_item_high_textview);
             lowTempView = (TextView) view.findViewById(R.id.list_item_low_textview);
-
         }
-
     }
 
-    public ForecastAdapter(Context context, Cursor c, int flags){
-
+    public ForecastAdapter(Context context, Cursor c, int flags) {
         super(context, c, flags);
-
     }
-
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-       //Choose the layout type
+        //Choose the layout type
         int viewType = getItemViewType(cursor.getPosition());
         int layoutId = -1;
-        switch (viewType){
+        switch (viewType) {
             case VIEW_TYPE_TODAY: {
-
                 layoutId = R.layout.list_item_forecast_today;
                 break;
-
             }
             case VIEW_TYPE_FUTURE_DAY: {
-
                 layoutId = R.layout.list_item_forecast;
                 break;
             }
-
         }
 
         View view = LayoutInflater.from(context).inflate(layoutId, parent, false);
+
         ViewHolder viewHolder = new ViewHolder(view);
         view.setTag(viewHolder);
+
         return view;
-
     }
-
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
+
         ViewHolder viewHolder = (ViewHolder) view.getTag();
+
         //Use placeholder image for now
         viewHolder.iconView.setImageResource(R.mipmap.ic_launcher);
 
         //Read date from cursor
         long dateInMillis = cursor.getLong(BlankFragment.COL_WEATHER_DATE);
         //Find TextView and set formatted date on it
-        viewHolder.dateView.setText(Utility.getFriendlyDayString(context,dateInMillis));
+        viewHolder.dateView.setText(Utility.getFriendlyDayString(context, dateInMillis));
 
         //Read weather forecast from cursor
         String description = cursor.getString(BlankFragment.COL_WEATHER_DESC);
-
         //Find text view and set weather forecast on it
         viewHolder.descriptionView.setText(description);
 
@@ -102,12 +89,11 @@ public class ForecastAdapter extends CursorAdapter {
 
         //Read high temperature from cursor
         double high = cursor.getDouble(BlankFragment.COL_WEATHER_MAX_TEMP);
-        viewHolder.highTempView.setText(Utility.formatTemperature(high,isMetric));
+        viewHolder.highTempView.setText(Utility.formatTemperature(context, high, isMetric));
 
         //Read low temperature from cursor
-
         double low = cursor.getDouble(BlankFragment.COL_WEATHER_MIN_TEMP);
-        viewHolder.lowTempView.setText(Utility.formatTemperature(low,isMetric));
+        viewHolder.lowTempView.setText(Utility.formatTemperature(context, low, isMetric));
 
     }
 
@@ -117,10 +103,10 @@ public class ForecastAdapter extends CursorAdapter {
     }
 
     @Override
-    public int getViewTypeCount(){
+    public int getViewTypeCount() {
 
         return VIEW_TYPE_COUNT;
 
     }
-
 }
+

@@ -2529,20 +2529,21 @@ containing a value of this type.
         public static final int bottom_sheet_behavior=0x7f07001a;
         public static final int character_counter_pattern=0x7f07001b;
         public static final int format_full_friendly_date=0x7f07001c;
-        public static final int hello_blank_fragment=0x7f07001d;
-        public static final int pref_location_default=0x7f07001e;
-        public static final int pref_location_key=0x7f07001f;
-        public static final int pref_location_label=0x7f070020;
-        public static final int pref_units_imperial=0x7f070021;
-        public static final int pref_units_key=0x7f070022;
-        public static final int pref_units_label=0x7f070023;
-        public static final int pref_units_label_imperial=0x7f070024;
-        public static final int pref_units_label_metric=0x7f070025;
-        public static final int pref_units_metric=0x7f070026;
+        public static final int format_temperature=0x7f07001d;
+        public static final int hello_blank_fragment=0x7f07001e;
+        public static final int pref_location_default=0x7f07001f;
+        public static final int pref_location_key=0x7f070020;
+        public static final int pref_location_label=0x7f070021;
+        public static final int pref_units_imperial=0x7f070022;
+        public static final int pref_units_key=0x7f070023;
+        public static final int pref_units_label=0x7f070024;
+        public static final int pref_units_label_imperial=0x7f070025;
+        public static final int pref_units_label_metric=0x7f070026;
+        public static final int pref_units_metric=0x7f070027;
         public static final int status_bar_notification_info_overflow=0x7f070013;
-        public static final int title_activity_detail=0x7f070027;
-        public static final int today=0x7f070028;
-        public static final int tomorrow=0x7f070029;
+        public static final int title_activity_detail=0x7f070028;
+        public static final int today=0x7f070029;
+        public static final int tomorrow=0x7f07002a;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a0088;
